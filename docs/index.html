@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- GoogleFonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap" rel="stylesheet"> 
+    <!-- FontAwesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <!-- My styles -->
+    <link rel="stylesheet" href="./ubuntu.css">
+    <title>Gamcoder | Ubuntu</title>
+</head>
+<body>
+    <header class="header">        
+        <nav class="nav">
+            <div class="nav-responsive">
+                <div class="site-name">
+                    <a href="https://gam98.github.io">Gamcoder!</a>
+                </div>
+                <i id="menu_icon" class="fas fa-bars"></i>
+            </div>
+            <ul class="menu">
+                <li><a title="Portfolio" href="#"><i class="fas fa-briefcase"></i></a></li>
+                <li><a title="Repos" href="https://github.com/gam98"><i class="fab fa-github"></i></a></li>      
+                <li><a title="CV" href="#"><i class="fas fa-print"></i></a></li>    
+                <li><a title="Linkedin" href="#"><i class="fab fa-linkedin"></i></a></li>                          
+                <li><a title="Buy me a coffee" href="#"><i class="fas fa-mug-hot"></i></a></li>
+                <li><a title="Alternar modo" href="#"><i class="fas fa-moon"></i></a></li>
+            </ul>
+        </nav>        
+    </header>
+    <aside class="sidebar" id="sidebar-menu">
+        <nav class="sidebar-nav">
+            <ul>
+                <li>
+                    <a id="item" href="#">Ubuntu <i class="fas fa-chevron-down"></i></a>
+                    <ul id="dropdown-items" class="sidebar-menu-content-main">
+                        <li class="active"><a href="#section-1">Primeros comandos</a></li>
+                        <li><a href="#section-2">Cambio de look</a></li>
+                        <li><a href="#section-3">Instalar extensiones</a></li>
+                        <li><a href="#section-4">Instalación del gestor de paquetes Synaptic</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">JavaScript <i class="fas fa-external-link-alt"></i></a>
+                </li>
+                <li>
+                    <a href="#">WebPack <i class="fas fa-external-link-alt"></i></a>
+                </li>
+                <li>
+                    <a href="#">React <i class="fas fa-external-link-alt"></i></a>
+                </li>          
+                <li>
+                    <a href="#">Spring <i class="fas fa-external-link-alt"></i></a>
+                </li>       
+
+                <li class="links-about-me">
+                    <a title="Portfolio" href="#"><i class="fas fa-briefcase"></i></a>
+                    <a title="Repos" href="https://github.com/gam98"><i class="fab fa-github"></i></a>
+                    <a title="CV" href="#"><i class="fas fa-print"></i></a>
+                    <a title="Linkedin" href="#"><i class="fab fa-linkedin"></i></a>                     
+                    <a title="Buy me a coffee" href="#"><i class="fas fa-mug-hot"></i></a>
+                    <a title="Alternar modo" href="#"><i class="fas fa-moon"></i></a>
+                </li>                                    
+            </ul>
+        </nav>
+    </aside>
+    <main class="u-wrapper">
+        <section id="section-1">
+            <a href="#"><h2 class="section-title">Primeros comandos.</h2></a>
+            <p>Primero abrir una terminal y ejecutar los siguientes comandos</p>
+            <div class="language-bash lg">
+                <pre>
+                <code id="code1">
+sudo apt update && apt upgrade</code>
+                </pre>
+                <span><i class="far fa-clipboard"></i></span>
+            </div>                       
+        </section>
+        <section id="section-2">
+            <a href="#"><h2 class="section-title">Cambio de look.</h2></a>
+            <p>Hay que crear dos carpetas (ocultas), una para los temas y otra para los iconos.</p>
+            <div class="language-bash lg">
+                <pre>
+                <code id="code2">
+mkdir .themes .icons</code>
+                </pre>
+                <span><i class="far fa-clipboard"></i></span>
+            </div>
+            <p>Luego hay que visitar la página en donde se pueden descargar temas/iconos para <strong><a target="_blank" href="https://www.gnome-look.org/browse/">Gnome</a></strong></p>
+            <ul>
+                <li><a href="https://www.gnome-look.org/browse/" target="_blank">Enlace a la página de gnome look</a></li>
+            </ul>
+            <p>Después de descargar los temas y/o iconos, hay que extraerlos en sus correspondientes carpetas.</p>
+            <p>También es necesario tener instalado la aplicación <strong>retoques</strong>. Esta aplicación se la puede descargar de la tienda de Ubuntu.</p>
+            <p>Por último hay que abrir la aplicación <strong>retoques</strong>, ir a apariencia y desde allí se puede elegir el/los tema/iconos descargados.</p>
+        </section>
+        <section id="section-3">
+            <a href="#">
+                <h2 class="section-title">Instalar extensiones.</h2>
+            </a>            
+            <p>Las extensiones permiten añadir funcionalidades. Hay que abrir una terminal y ejecutar el comando: </p>
+            <div class="language-bash lg">
+                <pre>
+                    <code id="code3">
+sudo apt install gnome-shell-extensions chrome-gnome-shell</code>    
+                </pre>
+                <span><i class="far fa-clipboard"></i></span>
+            </div>
+            <p>Luego ir al navegador e ingresar a la página de extensiones</p>
+            <ul>
+                <li><a href="https://extensions.gnome.org/" target="_blank">Enlace de la página de extensiones.</a></li>
+            </ul>
+            <p>Algunas de mis favoritas son: </p>
+            <ul>
+                <li>Clipboard Indicator</li>
+                <li>Espresso</li>
+                <li>Color Picker</li>
+                <li>Google Search Provider</li>
+                <li>GSConnect</li>
+                <li>Screenshot Tool</li>
+                <li>Tray Icons: Reloaded</li>
+                <li>Notes</li>
+            </ul>                                    
+        </section>
+        <section id="section-4">
+            <a href="#">
+                <h2 class="section-title">Instalación del gestor de paquetes Synaptic.</h2> 
+            </a>
+            <p>Este gestor de paquetes se encuentra en la tienda de Ubuntu.</p>
+            <p>Una vez instalado, hay que entrar e instalar: </p>
+            <ul>
+                <li><strong>ubuntu-restricted-extras</strong></li>
+                <li><strong>flatpak</strong> para tener más apliaciones disponibles.
+                    <ul>
+                        <li>Solo hay que marcar el motor que sería <strong>flatpak</strong> y <strong>gnome-software-plugin-flatpak</strong></li>                            
+                    </ul>
+                </li>
+                <li>También hay que instalar el <strong>OpenJDK</strong></li>                    
+            </ul>
+            <p>Por útimo se puede marcar en aplicar todo, para que instale todo lo extra, también hay que agregar el siguiente repositorio: </p>
+            <div class="language-bash lg">
+                <pre>
+                    <code id="code4">
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo</code>    
+                </pre>
+                <span><i class="far fa-clipboard"></i></span>
+            </div>
+        </section>
+    </main>
+    <script src="./ubuntu.js"></script>
+</body>
+</html>

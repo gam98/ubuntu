@@ -1,0 +1,361 @@
+:root {
+    /* ## Colors */    
+    /* ### Primary */
+    --dark-Blue-Intro-Email : hsl(217, 28%, 15%);/* (intro and email sign up background) */
+    --dark-Blue-Main-Bg: hsl(218, 28%, 13%);/* (main background) */    
+    --dark-Blue-Footer : hsl(216, 53%, 9%);/* (footer background) */
+    --dark-Blue-Cards-Bg : hsl(219, 30%, 18%);/* (cards background) */
+    /* ### Accent */
+    --cyan : hsl(176, 68%, 64%);/* (inside call-to-action gradient) */
+    --blue : hsl(198, 60%, 50%);/* (inside call-to-action gradient) */
+    --light-Red: hsl(0, 100%, 63%);/* (error) */
+    --white: hsl(0, 0%, 100%); /* ### Neutral */    
+}
+/* ### Headings, Call-to-actions, Header Navigation
+    - Family: [Raleway](https://fonts.google.com/specimen/Raleway)
+    - Weights: 400, 700
+    font-family: 'Raleway', sans-serif;
+    ### Body
+    - Family: [Open Sans](https://fonts.google.com/specimen/Open+Sans)
+    - Weights: 400, 700
+    font-family: 'Open Sans', sans-serif;
+*/
+html {
+    scroll-behavior: smooth;
+}
+/* :target::before {
+    content: '';
+    display: block;
+    height: 5rem;
+    margin-top: 1rem;
+} */
+[id] {
+    scroll-margin-top: 8ex;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: var(--white);
+    background-color: var(--dark-Blue-Main-Bg);
+    margin: 0;
+}
+a {
+    text-decoration: none;
+    color: var(--white)
+}
+.nav {
+    margin-bottom: 4rem;
+    z-index: 1;
+}
+.menu {
+    display: none;
+}
+.sidebar {
+    border: 2px solid var(--dark-Blue-Intro-Email);
+    list-style: none;
+    transform: translateX(-150%);
+    transition: transform .3s;
+    position: fixed;
+    z-index: 1;
+    padding: .8rem;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    background-color: var(--dark-Blue-Main-Bg);
+    border-radius: .3rem;
+}
+.sidebar-menu--show {
+    transform: translateX(0);
+}
+.menu {
+    list-style: none;
+}
+.menu li {
+    margin-bottom: .5rem;
+}
+.nav-responsive {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Raleway', sans-serif;
+    border-bottom: 2px solid var(--dark-Blue-Intro-Email);
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    font-size: 1.3rem;
+    background-color: var(--dark-Blue-Main-Bg);
+}
+.site-name {
+    font-weight: 700;
+}
+.sidebar-nav ul {
+    list-style: none;
+    padding-left: 0;
+}
+.sidebar-nav ul li {
+    margin-bottom: .5rem;
+}
+.links-about-me a{
+    margin-left: .4rem;
+}
+.sidebar-menu-content-main {    
+    display: none;
+    border-radius: .3rem;
+    background-color: var(--dark-Blue-Cards-Bg);
+    padding: .8rem .8rem .5rem;
+    margin-top: .3rem;
+    margin-bottom: .3rem;
+}
+.sidebar-menu-content-main--show {    
+    display: block;
+}
+.u-wrapper {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.section-title {
+    padding-bottom: .3rem;
+    border-bottom: 1px solid var(--dark-Blue-Cards-Bg);
+    position: relative;
+}
+.section-title:hover::before {
+    content: url("./link-solid.svg");
+    display: block;
+    position: absolute;
+    left: -1.5rem;
+    width: 1.2rem;
+    height: 1.2rem;
+}
+.code-inline {
+    padding: .1rem .2rem;
+    background-color: var(--dark-Blue-Footer);
+    border-radius: .2rem;
+}
+pre {
+    /* padding: 1.25rem 1.5rem; */
+    padding: .8rem;
+}
+[class|="language"] {
+    border-radius: .3rem;
+    background-color: var(--dark-Blue-Footer);
+    position: relative;
+}
+[class|="language"] pre {
+    overflow: auto;
+}
+[class*="bash"] {
+    /* position: relative; */
+    padding-left: 1rem;
+}
+[class*="sql"] {
+    padding-left: 3.4rem;
+}
+[class|="language"] pre code::before {
+    position: absolute;
+    left: 1rem;
+    top: 1.7rem;
+}
+.language-bash pre code::before {
+    content: "$";
+}
+.language-sql pre code::before {
+    content: "mysql>";
+}
+[class|="language"] pre code::after {
+    position: absolute;
+    right: .3rem;
+    top: .3rem;
+    font-size: .6rem;
+}
+[class|="language"] span {
+    position: absolute;
+    bottom: -.5rem;
+    right: -.5rem;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    background: linear-gradient(45deg,var(--blue),var(--cyan));
+    margin-left: auto;
+    margin-right: auto;
+    transition: transform .5s;
+}
+.lg.copied--show::before {
+    position: absolute;
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    border-left: 1rem solid transparent;
+    border-right: 1rem solid transparent;
+    border-bottom: 1rem solid var(--dark-Blue-Footer);
+    bottom: -1rem;
+    right: -.45rem;
+    z-index: 1;
+}
+.lg.copied--show::after {
+    position: absolute;
+    content: "copiado!";
+    font-size: .8rem;
+    right: -1rem;
+    z-index: 1;
+    padding: .3rem;
+    background-color: var(--dark-Blue-Footer);
+    border-radius: .3rem;
+}
+.lg.copied--show::before, .lg.copied--show::after::after {
+    transform: scale(0);
+    transition: transform .5s;
+}
+.lg.copied--show::before, .lg.copied--show::after::after {
+    transform: scale(1);
+}
+[class|="language"] span i {
+    line-height: 2;
+    margin-left: .63rem;
+}
+.clipboard-clicked {
+    transform: scale(1.1);
+}
+.language-bash pre code::after{
+    content: "bash";
+}
+.language-sql pre code::after{
+    content: "sql";
+}
+.fas.fa-external-link-alt {
+    font-size: .7rem;
+}
+.message-info {
+    border: 1px solid rgba(65,132,228,.4);
+    color: #6cb6ff;
+    padding: 0 1rem;
+    border-radius: .3rem;
+    background-image: linear-gradient(rgba(127,152,188,.1),rgba(65,132,228,.1))
+}
+@media screen and (min-width: 1024px){    
+    /* Menu */
+    .fas.fa-bars {
+        display: none;
+    }
+    .header {
+        margin-bottom: 5rem;
+    }
+    .menu {
+        transform: translateX(0);
+        position: static;
+        background: transparent;
+        width: auto;
+        margin-left: initial;
+        margin-right: inherit;
+        padding: 0;
+        display: flex;
+        gap: 1rem;
+    }
+    .nav-responsive {
+        display: block;
+        position: static;
+        margin-bottom: 0;
+        border-bottom: transparent;
+        padding: 0;
+    }
+    .nav {
+        display: flex;
+        align-items: center;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        justify-content: space-between;
+        border-bottom: 2px solid var(--dark-Blue-Intro-Email);
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
+        background-color: var(--dark-Blue-Main-Bg);
+    }
+    .sidebar-nav ul {
+        padding-left: revert;
+    }
+    .sidebar-nav ul .links-about-me {
+        display: none;
+    }
+    .menu li, .sidebar-menu-content-main li a{
+        margin-bottom: initial;
+        position: relative;
+    }
+    .sidebar-nav ul .sidebar-menu-content-main {
+        display: block;
+        background: transparent;
+        border-left: 2px solid var(--white);
+        border-radius: 0;
+        padding-left: 1.48rem;
+    }
+    .sidebar-menu-content-main li {
+        position: relative;
+    }
+    .sidebar-menu-content-main li::before {
+        content: "";
+        display: block;
+        height: 12px;
+        width: 12px;
+        background: var(--dark-Blue-Main-Bg);
+        border: 2px solid var(--white);
+        position: absolute;
+        left: -2rem;
+        top: calc(50% - 6px);
+        transform: rotate(45deg);
+        transition: .3s ease all;
+    }
+    .sidebar-menu-content-main li.active::before {
+        background-color: #9be6f5;
+        border: 2px solid var(--cyan);
+    }
+    .sidebar-menu-content-main li:hover:before {
+        border: 2px solid var(--cyan);
+    }
+    .menu li::before, .sidebar-menu-content-main li a::before {
+        transform: scaleX(0);
+        transform-origin: bottom right;
+    }
+    .menu li:hover::before ,.sidebar-menu-content-main li a:hover::before{
+        transform: scaleX(1);
+        transform-origin: bottom left;
+    }
+    .menu li::before, .sidebar-menu-content-main li a::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: -.2rem;
+        /* background: hsl(200 100% 80%); */
+        border-bottom: 2px solid var(--cyan);
+        z-index: -1;
+        transition: transform .3s ease;
+    }
+    .sidebar {
+        transform: translateX(0);
+        left: 0;
+        top: 3.4rem;
+        bottom: 0;
+        width: 20rem;
+        margin-left: initial;
+        text-align: initial;
+    }   
+    main {
+        padding-left: 20rem;
+    }
+    .u-wrapper {
+        width: 50%;
+    }
+    summary, [class|="language"] span {
+        cursor: pointer;
+    }
+    .fas.fa-chevron-down {
+        display: none;
+    }
+}
